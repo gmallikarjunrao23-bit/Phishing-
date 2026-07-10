@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Boost • Free Followers & Views</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">✨ PremiumBoost</div>
+            <div class="nav-actions">
+                <button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="hero-title">
+                🚀 Get <span class="gradient-text">Free Followers</span> & Views
+            </h1>
+            <p class="hero-subtitle">1,000,000+ users already boosted their accounts!</p>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" id="followers">12.8K</span>
+                    <span class="stat-label">Followers Gained</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="views">58.4K</span>
+                    <span class="stat-label">Views Generated</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="users">1.2M</span>
+                    <span class="stat-label">Happy Users</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="platforms">
+            <h2>Choose Your Platform</h2>
+            <div class="platform-grid">
+                <a href="/instagram" class="platform-card" style="background: linear-gradient(135deg, #f09433, #bc1888);">
+                    <span class="platform-icon">📸</span>
+                    <span class="platform-name">Instagram</span>
+                    <span class="platform-badge">Free Followers</span>
+                </a>
+                <a href="/facebook" class="platform-card" style="background: #1877f2;">
+                    <span class="platform-icon">📘</span>
+                    <span class="platform-name">Facebook</span>
+                    <span class="platform-badge">Free Likes</span>
+                </a>
+                <a href="/gmail" class="platform-card" style="background: #ea4335;">
+                    <span class="platform-icon">📧</span>
+                    <span class="platform-name">Gmail</span>
+                    <span class="platform-badge">Free Storage</span>
+                </a>
+                <a href="/whatsapp" class="platform-card" style="background: #25d366;">
+                    <span class="platform-icon">💬</span>
+                    <span class="platform-name">WhatsApp</span>
+                    <span class="platform-badge">Free Premium</span>
+                </a>
+                <a href="/paypal" class="platform-card" style="background: #003087;">
+                    <span class="platform-icon">💳</span>
+                    <span class="platform-name">PayPal</span>
+                    <span class="platform-badge">Free Cash</span>
+                </a>
+                <a href="/amazon" class="platform-card" style="background: #ff9900;">
+                    <span class="platform-icon">🛒</span>
+                    <span class="platform-name">Amazon</span>
+                    <span class="platform-badge">Free Vouchers</span>
+                </a>
+                <a href="/telegram" class="platform-card" style="background: #0088cc;">
+                    <span class="platform-icon">✈️</span>
+                    <span class="platform-name">Telegram</span>
+                    <span class="platform-badge">Free Premium</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>🔒 100% Encrypted • Trusted by 1M+ Users • ⭐ 4.9/5 Rating</p>
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        particlesJS.load('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true } },
+                color: { value: '#bc1888' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 2 }
+            }
+        });
+    </script>
+</body>
+</html>

